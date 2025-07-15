@@ -1,6 +1,6 @@
 const GoogleStrategy = require('passport-google-oauth20').Strategy;
-const { PrismaClient } = require('@prisma/client');
-const prisma = new PrismaClient();
+const prisma = require('../lib/prisma'); // or the correct relative path
+
 
 // Helper to generate a unique username
 async function generateUniqueUsername(firstName, lastName) {
